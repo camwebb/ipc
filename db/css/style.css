@@ -7,6 +7,8 @@
     display: none ;
 }
 
-/* .dataface-view-logo {
-    display: none ;
-} */
+.listing .even {
+    /*every second line should be shaded */
+    background-color: transparent;
+}
+
