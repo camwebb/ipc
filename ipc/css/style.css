@@ -1,0 +1,12 @@
+#xf-logo {
+    background-image: url(../img/logo.jpg);
+    height: 50px;
+}
+
+#dataface-sections-left-column {
+    display: none ;
+}
+
+/* .dataface-view-logo {
+    display: none ;
+} */
