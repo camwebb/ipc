@@ -95,5 +95,9 @@ class tables_obs {
                   '</a>';
     }
 
+    function det1_raw__htmlValue(&$record){
+        return $record->val('det1_raw').'    (<a target="_blank" href="mailto:ipc@camwebb.info?subject=IPC%20obs%20'.$record->val('id') . '">Sila kirim determinasi ttg obs # '. $record->val('id') .'</a>)';
+    }
+
 }
 ?>
