@@ -18,6 +18,13 @@
     <div class="container">
       <div class="row">
         <div class="eight columns" style="margin-top: 5%">
+          <!-- regenerate with 
+               echo "select det1_raw from obs;" | \
+               sql tmpipc | gawk '{print $1}' | sort | uniq | \
+               gawk '{print "<li><a \
+               href=\"db/index.php?-table=obs&amp;det1_raw=" $1 \
+               "\">"$1"</a></li>"}' >> genera.html
+           -->
           <h1>Search for plant genera</h1>
           <br/>
           <ul>
