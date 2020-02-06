@@ -8,6 +8,8 @@ class conf_ApplicationDelegate {
         Dataface_Application::getInstance()->addHeadContent(
             sprintf('<link rel="stylesheet" type="text/css" href="%s"/>',
                     htmlspecialchars(DATAFACE_SITE_URL.'/css/style.css')));
+        Dataface_Application::getInstance()->addHeadContent(
+            sprintf('<link rel="icon" type="image/jpeg" href="../img/icon.jpg"/>'));
     }
     
     function getPermissions(&$record){
