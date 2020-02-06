@@ -1,4 +1,4 @@
-ipc/conf.ini
-ipc/xataface/*
-ipc/templates_c/*
-ipc/tables/obs/photo*
+db/conf.ini
+db/xataface/*
+db/templates_c/*
+db/tables/obs/photo*
