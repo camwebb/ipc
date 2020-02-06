@@ -1,5 +1,5 @@
 #xf-logo {
-    background-image: url(../img/logo.jpg);
+    background-image: url(../img/plants.jpg);
     height: 50px;
 }
 
@@ -12,3 +12,6 @@
     background-color: transparent;
 }
 
+body {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+}
