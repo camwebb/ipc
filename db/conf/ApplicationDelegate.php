@@ -9,7 +9,7 @@ class conf_ApplicationDelegate {
             sprintf('<link rel="stylesheet" type="text/css" href="%s"/>',
                     htmlspecialchars(DATAFACE_SITE_URL.'/css/style.css')));
         Dataface_Application::getInstance()->addHeadContent(
-            sprintf('<link rel="icon" type="image/jpeg" href="../img/icon.jpg"/>'));
+            sprintf('<link rel="icon" type="image/jpeg" href="../img/favicon.jpg"/>'));
     }
     
     function getPermissions(&$record){
