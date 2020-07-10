@@ -10,5 +10,14 @@ class tables_person {
         if ( !isset($user) ) return Dataface_PermissionsTool::NO_ACCESS();
     }
     */
+
+    // for browse
+    function fb_name__htmlValue(&$record){
+        return '<a href="https://www.facebook.com/' . $record->val('fb_name') .
+                                                    '" target="_blank">'
+                                                    . $record->val('fb_name').
+                                                    '</a>';
+    }
+    
 }
 ?>
