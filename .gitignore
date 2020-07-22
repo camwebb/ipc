@@ -2,3 +2,4 @@ db/conf.ini
 db/xataface/*
 db/templates_c/*
 db/tables/obs/photo*
+peer/*
