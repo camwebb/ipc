@@ -17,117 +17,230 @@
 
     <div class="container">
       <div class="row">
-        <div class="four columns" style="margin-top: 5%">
+        <div class="eight columns" style="margin-top: 5%">
           <!-- regenerate with 
-               echo "select det1_raw from obs;" | \
-               sql tmpipc | gawk '{print $1}' | sort | uniq | \
-               gawk '{print "<li><a \
-               href=\"db/index.php?-table=obs&amp;det1_raw=" $1 \
-               "\">"$1"</a></li>"}' >> genera.html
-           -->
+               select distinct SUBSTRING_INDEX(det1_raw , ' ', 1) from obs 
+                 order by SUBSTRING_INDEX(det1_raw , ' ', 1);
+
+               ^\([^ ]+\) +|$ → <li><a href="db/index.php?-table=obs&amp;det1_raw=\1">\1</a></li>
+          -->
+          
           <h1>Search for plant genera</h1>
           <br/>
           <ul>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Actinodaphne">Actinodaphne</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Adenanthera">Adenanthera</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Aglaia">Aglaia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Amischotholipe">Amischotholipe</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Anoechtochilus">Anoechtochilus</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Anthrocepalus">Anthrocepalus</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Antidesma">Antidesma</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Archangelisia">Archangelisia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Artocarpus">Artocarpus</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Baccaurea">Baccaurea</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Bauhinia">Bauhinia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Bhesa">Bhesa</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Breynia">Breynia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Buchanania">Buchanania</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Calophyllum">Calophyllum</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Canarium">Canarium</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Capparis">Capparis</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Caryota">Caryota</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Casearia">Casearia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Cheilocostus">Cheilocostus</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Cinnamomum">Cinnamomum</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Cleistanthus">Cleistanthus</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Coeruleacense">Coeruleacense</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Cyathocalyx">Cyathocalyx</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Cycas">Cycas</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Daemonorops">Daemonorops</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Dioscorea">Dioscorea</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Diospyros">Diospyros</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Dipterocarpus">Dipterocarpus</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Donax">Donax</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Durio">Durio</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Dyera">Dyera</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Elatostema">Elatostema</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Eryngium">Eryngium</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Erythina">Erythina</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Fibraurea">Fibraurea</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Ficus">Ficus</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Freycinetia">Freycinetia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Girroniera">Girroniera</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Glochidion">Glochidion</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Graptophyllum">Graptophyllum</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Grewia">Grewia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Gynotroches">Gynotroches</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Heliciopsis">Heliciopsis</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Hellicia">Hellicia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=homalomena">Homalomena</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Hoya">Hoya</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Hura">Hura</a></li>
-          </ul>
-        </div>
-        <div class="four columns" style="margin-top: 5%">
-          <ul>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Ilex">Ilex</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Irvingia">Irvingia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Ixora">Ixora</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Jacaranda">Jacaranda</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Labisia">Labisia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Lasianthus">Lasianthus</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Lavanga">Lavanga</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Leea">Leea</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Mammea">Mammea</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Mangifera">Mangifera</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Memecylon">Memecylon</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Morinda">Morinda</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Myristica">Myristica</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Nepenthes">Nepenthes</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Oreocnide">Oreocnide</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Oroxylum">Oroxylum</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Palaquium">Palaquium</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Paranephelium">Paranephelium</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Payena">Payena</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Perciacaria">Perciacaria</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Polyalthia">Polyalthia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Polyosma">Polyosma</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Prunus">Prunus</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Pycnarrhena">Pycnarrhena</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Pyrenaria">Pyrenaria</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Rinorea">Rinorea</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Sandoricum">Sandoricum</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Sarcotheca">Sarcotheca</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Saurauria">Saurauria</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Shorea">Shorea</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Sindora">Sindora</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Strombosia">Strombosia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Syzygium">Syzygium</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Tabernaemontana">Tabernaemontana</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Tacca">Tacca</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Ternstroemia">Ternstroemia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Tetractomia">Tetractomia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Trema">Trema</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Tristaniopsis">Tristaniopsis</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Uncaria">Uncaria</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Vitex">Vitex</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Volkameria">Volkameria</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Whiteodendron">Whiteodendron</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Willughbeia">Willughbeia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Xerosperum">Xerosperum</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Xylopia">Xylopia</a></li>
-            <li><a href="db/index.php?-table=obs&amp;det1_raw=Ziziphus">Ziziphus</a></li>
-          </ul>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Actinodaphne">Actinodaphne</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Adenanthera">Adenanthera</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Agelaea">Agelaea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Aglaia">Aglaia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Aidia">Aidia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Alphitonia">Alphitonia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Alphonsea">Alphonsea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Alseodaphne">Alseodaphne</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Amischotholipe">Amischotholipe</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Anacolosa">Anacolosa</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Anisoptera">Anisoptera</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Annonaceae">Annonaceae</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Anoechtochilus">Anoechtochilus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Anthrocepalus">Anthrocepalus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Antidesma">Antidesma</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Aporosa">Aporosa</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Archangelisia">Archangelisia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Ardisia">Ardisia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Artocarpus">Artocarpus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Astetaceae">Astetaceae</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Baccaurea">Baccaurea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Barringtonia">Barringtonia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Bauhinia">Bauhinia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Beilschemidia">Beilschemidia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Bhesa">Bhesa</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Bischofia">Bischofia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Blumeodendron">Blumeodendron</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Breynia">Breynia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Buchanania">Buchanania</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Burseraceae">Burseraceae</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Calophyllum">Calophyllum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Camellia">Camellia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Canarium">Canarium</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Canthium">Canthium</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Capparis">Capparis</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Caryota">Caryota</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Casearia">Casearia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Cayratia">Cayratia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Cheilocostus">Cheilocostus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Chionanthus">Chionanthus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Chrysophyllum">Chrysophyllum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Cinnamomum">Cinnamomum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Cleistanthus">Cleistanthus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Clerodendrum">Clerodendrum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Cnestis">Cnestis</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Coeruleacense">Coeruleacense</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Combretocarpus">Combretocarpus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Conostegia">Conostegia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Cotylelobium">Cotylelobium</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Crateva">Crateva</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Cratoxylum">Cratoxylum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Cryptocarya">Cryptocarya</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Curcubitaceae">Curcubitaceae</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Cyathocalyx">Cyathocalyx</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Cycas">Cycas</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Cyperus">Cyperus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Dacryodes">Dacryodes</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Daemonorops">Daemonorops</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Daphniphyllum">Daphniphyllum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Derris">Derris</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Dimocarpus">Dimocarpus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Dioscorea">Dioscorea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Diospyros">Diospyros</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Dipterocarpaceae">Dipterocarpaceae</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Dipterocarpus">Dipterocarpus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Donax">Donax</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Dracontomelon">Dracontomelon</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Durio">Durio</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Dyera">Dyera</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Elateriospermum">Elateriospermum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Elatostema">Elatostema</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Embelia">Embelia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Enicosanthum">Enicosanthum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Equisetum">Equisetum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Eryngium">Eryngium</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Erythina">Erythina</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Etlingera">Etlingera</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Euphorbiaceae">Euphorbiaceae</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Eurya">Eurya</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Fagaceae">Fagaceae</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Fagraea">Fagraea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Fibraurea">Fibraurea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Ficus">Ficus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Fordia">Fordia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Fragraea">Fragraea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Freycinetia">Freycinetia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Garcinia">Garcinia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Gardenia">Gardenia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Girriniera">Girriniera</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Girroniera">Girroniera</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Glochidio">Glochidio</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Glochidion">Glochidion</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Gluta">Gluta</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Gomphia">Gomphia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Goniothalamus">Goniothalamus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Graptophyllum">Graptophyllum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Grenacheria">Grenacheria</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Grewia">Grewia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Gymnacranthera">Gymnacranthera</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Gynothroches">Gynothroches</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Gynotroches">Gynotroches</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Heliciopsis">Heliciopsis</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Hellicia">Hellicia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Heritiera">Heritiera</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Hibiscus">Hibiscus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Homalomena">Homalomena</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Hopea">Hopea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Horsfieldia">Horsfieldia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Hoya">Hoya</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Hunteria">Hunteria</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Hura">Hura</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Hydnocarpus">Hydnocarpus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Ilex">Ilex</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Intsia">Intsia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Irvingia">Irvingia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Ixora">Ixora</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Jacaranda">Jacaranda</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Labisia">Labisia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Lasianthus">Lasianthus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Lauraceae">Lauraceae</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Lavanga">Lavanga</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Leea">Leea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Lepisanthes">Lepisanthes</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Leptonychia">Leptonychia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Macaranga">Macaranga</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Madhuca">Madhuca</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Mammea">Mammea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Mangifera">Mangifera</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Medinilla">Medinilla</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Melastoma">Melastoma</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Meliaceae">Meliaceae</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Melidorum">Melidorum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Memecylon">Memecylon</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Mezzettia">Mezzettia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Michelia">Michelia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Microcos">Microcos</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Monocarpia">Monocarpia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Morinda">Morinda</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Moultonianthus">Moultonianthus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Myristica">Myristica</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Nauclea">Nauclea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Neonauclea">Neonauclea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Nepenthes">Nepenthes</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Nephelium">Nephelium</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Neptunia">Neptunia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Ochanostachys">Ochanostachys</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Oreocnide">Oreocnide</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Oroxylum">Oroxylum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Palaquium">Palaquium</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Paranephelium">Paranephelium</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Pavetta">Pavetta</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Payena">Payena</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Perciacaria">Perciacaria</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Physalis">Physalis</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Poikilospermum">Poikilospermum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Polyalthia">Polyalthia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Polyosma">Polyosma</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Portulaca">Portulaca</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Prunus">Prunus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Pterisanthes">Pterisanthes</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Pternandra">Pternandra</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Pterospermum">Pterospermum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Pycnarrhena">Pycnarrhena</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Pyrenaria">Pyrenaria</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Rafflesia">Rafflesia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Rhamnaceae">Rhamnaceae</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Rhizanthes">Rhizanthes</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Rinorea">Rinorea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Rubiaceae">Rubiaceae</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Sandoricum">Sandoricum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Sapotaceae">Sapotaceae</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Sarcotheca">Sarcotheca</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Saurauria">Saurauria</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Schefflera">Schefflera</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Scorodocarpus">Scorodocarpus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Shorea">Shorea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Sindora">Sindora</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Solanum">Solanum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Sonchus">Sonchus</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Stachytarpheta">Stachytarpheta</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Sterculia">Sterculia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Strombosia">Strombosia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Symplocaceae">Symplocaceae</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Symplocos">Symplocos</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Syzygium">Syzygium</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Tabernaemontana">Tabernaemontana</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Tacca">Tacca</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Teijsmaniodendron">Teijsmaniodendron</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Tephrosia">Tephrosia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Ternstroemia">Ternstroemia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Tetractomia">Tetractomia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Tetramerista">Tetramerista</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Trema">Trema</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Trigoniastrum">Trigoniastrum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Tristaniopsis">Tristaniopsis</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Uncaria">Uncaria</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Urophyllum">Urophyllum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Usnea">Usnea</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Uvaria">Uvaria</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Vaccinium">Vaccinium</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Vatica">Vatica</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Vitaceae">Vitaceae</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Vitex">Vitex</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Volkameria">Volkameria</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Whiteodendron">Whiteodendron</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Willughbeia">Willughbeia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Xerospermum">Xerospermum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Xerosperum">Xerosperum</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Xylopia">Xylopia</a></li>
+<li><a href="db/index.php?-table=obs&amp;det1_raw=Ziziphus">Ziziphus</a></li>
+
+            
+</ul>
         </div>
         <div class="four columns" style="margin-top: 10%">
           <a href="index.html">
