@@ -23,7 +23,7 @@ class conf_ApplicationDelegate {
     // add a HOME link
     function block__after_xf_logo()
     {
-        echo "<a href=\"../index.html\">HOME</a> - <a href=\"../families.html\">Families</a> - <a href=\"../genera.html\">Genera</a>";
+        echo "<a href=\"../index.html\">HOME</a> - <a href=\"../genera.html\">Genera and Families</a>";
     }
     
 }
