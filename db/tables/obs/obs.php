@@ -103,6 +103,11 @@ class tables_obs {
         return '<a href="index.php?-table=person&amp;-action=browse&amp;id='.$record->val('personID').'">' . $record->display('personID') . '</a>';
     }
 
-    
+    /*
+    function beforeInsert(&$record){
+        $auth =& Dataface_AuthenticationTool::getInstance();
+        $user =& $auth->getLoggedInUser();
+        if ( $user ) $record->setValue('uploader', $user->val('usr_id'));
+        } */
 }
 ?>
